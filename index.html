@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+        <div id="first" style="height: 100vh; width: 100vw; background-color: black;">
+            <button onclick="handleFirst()">move</button>
+        </div>
+        <div id="second" style="height: 100vh; width: 100vw; background-color: black;">
+            <button>move to 4th</button>
+        </div>
+        <div id="third" style="height: 100vh; width: 100vw; background-color: pink;">
+            <button>move</button>
+        </div>
+        <div id="fourth" style="height: 100vh; width: 100vw; background-color: orange;">
+            <button>move</button>
+        </div>
+    </main>
+
+    <script>
+        function handleFirst() {
+            console.log("clickedddddd!")
+            const ele = document.getElementById("second")
+            ele?.scrollIntoView({ behavior: "smooth" })
+        }
+    </script>
+
+</body>
+
+</html>

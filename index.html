@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* Your existing CSS styles */
         html,
         body,
         div,
@@ -111,6 +113,7 @@
 
         body {
             line-height: 1;
+            overflow: hidden;
         }
 
         ol,
@@ -139,12 +142,12 @@
 </head>
 
 <body>
-    <main
-        style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+    <main id="maincontainer"
+        style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
         <div id="first" style="height: 100vh; width: 100vw; background-color: black;">
             <button onclick="handleFirst()">move</button>
         </div>
-        <div id="second" style="height: 100vh; width: 100vw; background-color: black;">
+        <div id="second" style="height: 100vh; width: 100vw; background-color: greenyellow;">
             <button onclick="handleSecond()">move to 4th</button>
         </div>
         <div id="third" style="height: 100vh; width: 100vw; background-color: pink;">
@@ -156,24 +159,54 @@
     </main>
 
     <script>
+        let scrollingEnabled = true;
+
+        function enableScrolling() {
+            document.getElementById("maincontainer").style.overflow = "auto";
+            document.body.style.overflow = "auto";
+        }
+
+        function disableScrolling() {
+            document.getElementById("maincontainer").style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
+        }
+
         function handleFirst() {
-            const ele = document.getElementById("second")
-            ele?.scrollIntoView({ behavior: "smooth" })
+            if (scrollingEnabled) {
+                disableScrolling();
+                const ele = document.getElementById("second");
+                ele?.scrollIntoView({ behavior: "smooth" });
+                enableScrolling();
+            }
         }
+
         function handleSecond() {
-            const ele = document.getElementById("fourth")
-            ele?.scrollIntoView({ behavior: "smooth" })
+            if (scrollingEnabled) {
+                disableScrolling();
+                const ele = document.getElementById("fourth");
+                ele?.scrollIntoView({ behavior: "smooth" });
+                enableScrolling();
+            }
         }
+
         function handleThird() {
-            const ele = document.getElementById("first")
-            ele?.scrollIntoView({ behavior: "smooth" })
+            if (scrollingEnabled) {
+                disableScrolling();
+                const ele = document.getElementById("first");
+                ele?.scrollIntoView({ behavior: "smooth" });
+                enableScrolling();
+            }
         }
+
         function handleFourth() {
-            const ele = document.getElementById("third")
-            ele?.scrollIntoView({ behavior: "smooth" })
+            if (scrollingEnabled) {
+                disableScrolling();
+                const ele = document.getElementById("third");
+                ele?.scrollIntoView({ behavior: "smooth" });
+                enableScrolling();
+            }
         }
     </script>
-
 </body>
 
 </html>

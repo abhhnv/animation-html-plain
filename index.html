@@ -5,28 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            overflow: hidden;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <main style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+    <main
+        style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
         <div id="first" style="height: 100vh; width: 100vw; background-color: black;">
             <button onclick="handleFirst()">move</button>
         </div>
         <div id="second" style="height: 100vh; width: 100vw; background-color: black;">
-            <button>move to 4th</button>
+            <button onclick="handleSecond()">move to 4th</button>
         </div>
         <div id="third" style="height: 100vh; width: 100vw; background-color: pink;">
-            <button>move</button>
+            <button onclick="handleThird()">move</button>
         </div>
         <div id="fourth" style="height: 100vh; width: 100vw; background-color: orange;">
-            <button>move</button>
+            <button onclick="handleFourth()">move</button>
         </div>
     </main>
 
     <script>
         function handleFirst() {
-            console.log("clickedddddd!")
             const ele = document.getElementById("second")
+            ele?.scrollIntoView({ behavior: "smooth" })
+        }
+        function handleSecond() {
+            const ele = document.getElementById("fourth")
+            ele?.scrollIntoView({ behavior: "smooth" })
+        }
+        function handleThird() {
+            const ele = document.getElementById("first")
+            ele?.scrollIntoView({ behavior: "smooth" })
+        }
+        function handleFourth() {
+            const ele = document.getElementById("third")
             ele?.scrollIntoView({ behavior: "smooth" })
         }
     </script>

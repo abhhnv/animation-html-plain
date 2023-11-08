@@ -11,6 +11,10 @@ document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
 
+var count = 1;
+
+console.log("count", count)
+
 const animations = [FirstDiv1Animation, FirstDiv2Animation, FirstDiv3Animation]
 
 /*
@@ -18,7 +22,6 @@ scan-loop -> 3rd frame
 scan-transition - 2nd frame
 1 -> 1st frame
 */
-
 
 function playNextAnimation() {
     animation1.destroy()
@@ -88,28 +91,36 @@ var animation3rdDiv = lottieWeb.loadAnimation({
     name: "Demo Animation",
 });
 
-
-
 animation1.addEventListener('complete', playNextAnimation);
 
 function firstDivMove() {
     handleFirst()
     animation2ndDiv.play()
+    count = 2
+    console.log("count", count)
 }
 
 function secondDivMove() {
     handleSecond()
     animation4thDiv.play()
+    count = 3
+    console.log("count", count)
 }
 
 function thirdDivMove() {
     handleThird()
+    count = 5
+    console.log("count", count)
 }
 
 function fourthDivMove() {
     handleFourth()
     animation3rdDiv.play()
+    count = 4;
+    console.log("count", count)
 }
+
+console.log({ count })
 
 function enableScrolling() {
     document.getElementById("maincontainer").style.overflow = "auto";
@@ -153,7 +164,6 @@ function handleThird() {
         behavior: "smooth",
     });
     disableScrolling();
-
 }
 
 function handleFourth() {

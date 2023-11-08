@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "lottie-web": "^5.12.2",
-    "seamless-scroll-polyfill": "^2.3.4",
     "smooth-scroll-into-view-if-needed": "^2.0.2"
   }
 }

@@ -80,13 +80,13 @@ function fourthDivMove() {
 }
 
 function enableScrolling() {
-    document.getElementById("maincontainer").style.overflow = "visible";
-    document.body.style.overflow = "visible";
+    document.getElementById("maincontainer").style.overflow = "auto";
+    // document.body.style.overflow = "auto";
 }
 
 function disableScrolling() {
     document.getElementById("maincontainer").style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
 }
 
 function handleFirst() {

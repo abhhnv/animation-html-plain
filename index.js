@@ -1,25 +1,15 @@
 import FirstDiv1Animation from './lottie/1.json'
 import FirstDiv2Animation from './lottie/scan_transition.json'
 import FirstDiv3Animation from './lottie/scan_loop.json'
+import SecondDivAnimation from './lottie/PopCoin.json'
+import FourthDivAnimation from './lottie/Rewards.json'
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
-
-
-// Add event listeners to the buttons
-// document.getElementById("firstbtn").addEventListener("click", handleFirst);
-// document.getElementById("secondbtn").addEventListener("click", handleSecond);
-// document.getElementById("thirdbtn").addEventListener("click", handleThird);
-// document.getElementById("fourthbtn").addEventListener("click", handleFourth);
 
 document.getElementById("first").addEventListener("touchmove", firstDivMove);
 document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
-
-document.getElementById("first").addEventListener("click", firstDivMove);
-document.getElementById("second").addEventListener("click", secondDivMove);
-document.getElementById("third").addEventListener("click", thirdDivMove);
-document.getElementById("fourth").addEventListener("click", fourthDivMove);
 
 const animations = [FirstDiv1Animation, FirstDiv2Animation, FirstDiv3Animation]
 
@@ -68,15 +58,36 @@ var animation1 = lottieWeb.loadAnimation({
     name: "Demo Animation",
 });
 
+var animation2ndDiv = lottieWeb.loadAnimation({
+    container: document.getElementById('lottieDivSecond'),
+    animationData: SecondDivAnimation,
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    name: "Demo Animation",
+});
+
+var animation4thDiv = lottieWeb.loadAnimation({
+    container: document.getElementById('lottieDivFourth'),
+    animationData: FourthDivAnimation,
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    name: "Demo Animation",
+});
+
+
+
 animation1.addEventListener('complete', playNextAnimation);
 
 function firstDivMove() {
-    console.log("clciked--->")
     handleFirst()
+    animation2ndDiv.play()
 }
 
 function secondDivMove() {
     handleSecond()
+    animation4thDiv.play()
 }
 
 function thirdDivMove() {

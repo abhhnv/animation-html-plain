@@ -80,8 +80,8 @@ function fourthDivMove() {
 }
 
 function enableScrolling() {
-    document.getElementById("maincontainer").style.overflow = "auto";
-    document.body.style.overflow = "auto";
+    document.getElementById("maincontainer").style.overflow = "visible";
+    document.body.style.overflow = "visible";
 }
 
 function disableScrolling() {

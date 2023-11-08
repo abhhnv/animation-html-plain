@@ -1,10 +1,32 @@
 import Lottie from "lottie-web";
 
 // Add event listeners to the buttons
-document.getElementById("first").addEventListener("click", handleFirst);
-document.getElementById("second").addEventListener("click", handleSecond);
-document.getElementById("third").addEventListener("click", handleThird);
-document.getElementById("fourth").addEventListener("click", handleFourth);
+document.getElementById("firstbtn").addEventListener("click", handleFirst);
+document.getElementById("secondbtn").addEventListener("click", handleSecond);
+document.getElementById("thirdbtn").addEventListener("click", handleThird);
+document.getElementById("fourthbtn").addEventListener("click", handleFourth);
+
+document.getElementById("first").addEventListener("touchmove", firstDivMove);
+document.getElementById("second").addEventListener("touchmove", secondDivMove);
+document.getElementById("third").addEventListener("touchmove", thirdDivMove);
+document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
+
+function firstDivMove() {
+    handleFirst()
+}
+
+function secondDivMove() {
+    handleSecond()
+}
+
+function thirdDivMove() {
+    handleThird()
+}
+
+function fourthDivMove() {
+    handleFourth()
+}
+
 
 Lottie.loadAnimation({
     container: document.getElementById("testingg"),

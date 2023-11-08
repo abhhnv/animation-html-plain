@@ -138,14 +138,20 @@
             border-collapse: collapse;
             border-spacing: 0;
         }
+
+        #first {
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 
 <body>
     <main id="maincontainer"
-        style="background-color: red; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
-        <div id="first" style="height: 100vh; width: 100vw; background-color: black;">
+        style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
+        <div id="first" style="height: 100vh; width: 100vw;">
             <button onclick="handleFirst()">move</button>
+            <div id="testingg"></div>
         </div>
         <div id="second" style="height: 100vh; width: 100vw; background-color: greenyellow;">
             <button onclick="handleSecond()">move to 4th</button>
@@ -157,56 +163,7 @@
             <button onclick="handleFourth()">move</button>
         </div>
     </main>
-
-    <script>
-        let scrollingEnabled = true;
-
-        function enableScrolling() {
-            document.getElementById("maincontainer").style.overflow = "auto";
-            document.body.style.overflow = "auto";
-        }
-
-        function disableScrolling() {
-            document.getElementById("maincontainer").style.overflow = "hidden";
-            document.body.style.overflow = "hidden";
-        }
-
-        function handleFirst() {
-            if (scrollingEnabled) {
-                disableScrolling();
-                const ele = document.getElementById("second");
-                ele?.scrollIntoView({ behavior: "smooth" });
-                enableScrolling();
-            }
-        }
-
-        function handleSecond() {
-            if (scrollingEnabled) {
-                disableScrolling();
-                const ele = document.getElementById("fourth");
-                ele?.scrollIntoView({ behavior: "smooth" });
-                enableScrolling();
-            }
-        }
-
-        function handleThird() {
-            if (scrollingEnabled) {
-                disableScrolling();
-                const ele = document.getElementById("first");
-                ele?.scrollIntoView({ behavior: "smooth" });
-                enableScrolling();
-            }
-        }
-
-        function handleFourth() {
-            if (scrollingEnabled) {
-                disableScrolling();
-                const ele = document.getElementById("third");
-                ele?.scrollIntoView({ behavior: "smooth" });
-                enableScrolling();
-            }
-        }
-    </script>
+    <script type="module" src="index.js" />
 </body>
 
 </html>

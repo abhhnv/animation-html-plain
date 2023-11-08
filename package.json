@@ -1,0 +1,16 @@
+{
+  "name": "animation-html",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lottie-web": "^5.12.2"
+  }
+}

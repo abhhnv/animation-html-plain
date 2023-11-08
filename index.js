@@ -78,6 +78,16 @@ var animation4thDiv = lottieWeb.loadAnimation({
     name: "Demo Animation",
 });
 
+var animation3rdDiv = lottieWeb.loadAnimation({
+    container: document.getElementById('lottieDivThird'),
+    // TODO - replace this with actual animation
+    animationData: FirstDiv2Animation,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    name: "Demo Animation",
+});
+
 
 
 animation1.addEventListener('complete', playNextAnimation);
@@ -98,6 +108,7 @@ function thirdDivMove() {
 
 function fourthDivMove() {
     handleFourth()
+    animation3rdDiv.play()
 }
 
 function enableScrolling() {

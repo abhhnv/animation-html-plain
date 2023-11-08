@@ -58,12 +58,14 @@ var animation1 = lottieWeb.loadAnimation({
     name: "Demo Animation",
 });
 
+// 2nd div onwards
+
 var animation2ndDiv = lottieWeb.loadAnimation({
     container: document.getElementById('lottieDivSecond'),
     animationData: SecondDivAnimation,
     renderer: 'svg',
     loop: false,
-    autoplay: true,
+    autoplay: false,
     name: "Demo Animation",
 });
 
@@ -72,7 +74,7 @@ var animation4thDiv = lottieWeb.loadAnimation({
     animationData: FourthDivAnimation,
     renderer: 'svg',
     loop: false,
-    autoplay: true,
+    autoplay: false,
     name: "Demo Animation",
 });
 

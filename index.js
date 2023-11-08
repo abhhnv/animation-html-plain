@@ -1,18 +1,25 @@
 import FirstDiv1Animation from './lottie/1.json'
 import FirstDiv2Animation from './lottie/scan_transition.json'
 import FirstDiv3Animation from './lottie/scan_loop.json'
-
 import lottieWeb from "lottie-web";
+import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
+
+
 // Add event listeners to the buttons
 // document.getElementById("firstbtn").addEventListener("click", handleFirst);
-document.getElementById("secondbtn").addEventListener("click", handleSecond);
-document.getElementById("thirdbtn").addEventListener("click", handleThird);
-document.getElementById("fourthbtn").addEventListener("click", handleFourth);
+// document.getElementById("secondbtn").addEventListener("click", handleSecond);
+// document.getElementById("thirdbtn").addEventListener("click", handleThird);
+// document.getElementById("fourthbtn").addEventListener("click", handleFourth);
 
 document.getElementById("first").addEventListener("touchmove", firstDivMove);
 document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
+
+document.getElementById("first").addEventListener("click", firstDivMove);
+document.getElementById("second").addEventListener("click", secondDivMove);
+document.getElementById("third").addEventListener("click", thirdDivMove);
+document.getElementById("fourth").addEventListener("click", fourthDivMove);
 
 const animations = [FirstDiv1Animation, FirstDiv2Animation, FirstDiv3Animation]
 
@@ -36,7 +43,7 @@ function playNextAnimation() {
 
     animation2.play()
     animation2.addEventListener('complete', playNextNextAnimation);
-    
+
     function playNextNextAnimation() {
         console.log("second complete")
         animation2.destroy()
@@ -64,6 +71,7 @@ var animation1 = lottieWeb.loadAnimation({
 animation1.addEventListener('complete', playNextAnimation);
 
 function firstDivMove() {
+    console.log("clciked--->")
     handleFirst()
 }
 
@@ -91,22 +99,35 @@ function disableScrolling() {
 
 function handleFirst() {
     enableScrolling();
+    console.log("here")
     const ele = document.getElementById("second");
-    ele?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollIntoView(ele, {
+        block: "start", // or "center" or "end"
+        inline: "nearest", // or "center" or "end"
+        behavior: "smooth",
+    });
     disableScrolling();
 }
 
 function handleSecond() {
     enableScrolling();
     const ele = document.getElementById("fourth");
-    ele?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollIntoView(ele, {
+        block: "start", // or "center" or "end"
+        inline: "nearest", // or "center" or "end"
+        behavior: "smooth",
+    });
     disableScrolling();
 }
 
 function handleThird() {
     enableScrolling();
     const ele = document.getElementById("first");
-    ele?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollIntoView(ele, {
+        block: "start", // or "center" or "end"
+        inline: "nearest", // or "center" or "end"
+        behavior: "smooth",
+    });
     disableScrolling();
 
 }
@@ -114,7 +135,11 @@ function handleThird() {
 function handleFourth() {
     enableScrolling();
     const ele = document.getElementById("third");
-    ele?.scrollIntoView({ behavior: "smooth" });
+    smoothScrollIntoView(ele, {
+        block: "start", // or "center" or "end"
+        inline: "nearest", // or "center" or "end"
+        behavior: "smooth",
+    });
     disableScrolling();
 }
 

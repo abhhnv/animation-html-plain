@@ -10,6 +10,13 @@ document.getElementById("first").addEventListener("touchmove", firstDivMove);
 document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
+document.getElementById("skip-btn").addEventListener("click", handleRewardsBtn);
+
+function handleRewardsBtn() {
+    window.JSInterface.skip()
+    window.location.href = "popclubapp://skiponboarding";
+    console.log("Skip Button Clicked")
+}
 
 var count = 1;
 

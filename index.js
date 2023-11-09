@@ -11,6 +11,8 @@ document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
 document.getElementById("skip-btn").addEventListener("click", handleRewardsBtn);
+document.getElementById("3rd-div-next-btn").addEventListener("click", thirdDivMove);
+
 
 function handleRewardsBtn() {
     window.JSInterface.skip()

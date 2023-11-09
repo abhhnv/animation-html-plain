@@ -14,8 +14,11 @@ document.getElementById("skip-btn").addEventListener("click", handleRewardsBtn);
 document.getElementById("3rd-div-next-btn").addEventListener("click", thirdDivMove);
 
 
+
 function handleRewardsBtn() {
+    // android
     window.JSInterface.skip()
+    // ios
     window.location.href = "popclubapp://skiponboarding";
     console.log("Skip Button Clicked")
 }
@@ -58,6 +61,7 @@ function playNextAnimation() {
             name: "Demo Animation",
         });
         animation3.play()
+        document.getElementById('card-visible-toggle').style.visibility = "visible";
     }
 }
 

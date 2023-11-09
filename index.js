@@ -3,6 +3,7 @@ import FirstDiv2Animation from './lottie/scan_transition.json'
 import FirstDiv3Animation from './lottie/scan_loop.json'
 import SecondDivAnimation from './lottie/PopCoin.json'
 import FourthDivAnimation from './lottie/Rewards.json'
+import Test from './test.json'
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
 
@@ -34,10 +35,13 @@ scan-loop -> 3rd frame
 scan-transition - 2nd frame
 1 -> 1st frame
 */
+var animation1;
+var animation2;
+var animation3;
 
 function playNextAnimation() {
     animation1.destroy()
-    var animation2 = lottieWeb.loadAnimation({
+    animation2 = lottieWeb.loadAnimation({
         container: document.getElementById('lottieDivFirst'),
         animationData: animations[1],
         renderer: 'svg',
@@ -52,7 +56,7 @@ function playNextAnimation() {
     function playNextNextAnimation() {
         console.log("second complete")
         animation2.destroy()
-        var animation3 = lottieWeb.loadAnimation({
+        animation3 = lottieWeb.loadAnimation({
             container: document.getElementById('lottieDivFirst'),
             animationData: animations[2],
             renderer: 'svg',
@@ -65,7 +69,7 @@ function playNextAnimation() {
     }
 }
 
-var animation1 = lottieWeb.loadAnimation({
+animation1 = lottieWeb.loadAnimation({
     container: document.getElementById('lottieDivFirst'),
     animationData: animations[0],
     renderer: 'svg',
@@ -104,6 +108,16 @@ var animation3rdDiv = lottieWeb.loadAnimation({
     name: "Demo Animation",
 });
 
+var animation5thDiv = lottieWeb.loadAnimation({
+    container: document.getElementById('lottieDivFifth'),
+    // TODO - replace this with actual animation
+    animationData: Test,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    name: "testing",
+});
+
 animation1.addEventListener('complete', playNextAnimation);
 
 function firstDivMove() {
@@ -124,6 +138,8 @@ function thirdDivMove() {
     handleThird()
     count = 5
     console.log("count", count)
+    // change the animation here
+    playLastAnimation()
 }
 
 function fourthDivMove() {
@@ -131,6 +147,17 @@ function fourthDivMove() {
     animation3rdDiv.play()
     count = 4;
     console.log("count", count)
+}
+
+function playLastAnimation() {
+    console.log("lastinggggggggg")
+    animation1.destroy()
+    animation2.destroy()
+    animation3.destroy()
+    document.getElementById('lottieDivFirst').style.display = 'none';
+    document.getElementById('lottieDivFifth').style.backgroundColor = 'white';
+
+    animation5thDiv.play()
 }
 
 console.log({ count })

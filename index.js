@@ -14,21 +14,34 @@ document.getElementById("first").addEventListener("touchmove", firstDivMove);
 document.getElementById("second").addEventListener("touchmove", secondDivMove);
 document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
-document.getElementById("skip-btn").addEventListener("click", handleRewardsBtn);
+// skip buttons
+document.getElementById("skip-btn-first").addEventListener("click", handleRewardsBtn);
+document.getElementById("skip-btn-second").addEventListener("click", handleRewardsBtn);
+document.getElementById("skip-btn-third").addEventListener("click", handleRewardsBtn);
+document.getElementById("skip-btn-fourth").addEventListener("click", handleRewardsBtn);
+
 document.getElementById("3rd-div-next-btn").addEventListener("click", thirdDivMove);
 document.getElementById("last-next-btn").addEventListener("click", lastNextBtn);
 
 function lastNextBtn() {
     console.log("last next button clicked")
+    if (window?.location?.search === "?device=ios") {
+        window.location.href = "popclubapp://skiponboarding";
+    }
+    if (window?.location?.search === "?device=android") {
+        window.JSInterface.skip()
+    }
 }
 
 function handleRewardsBtn() {
     console.log("Skip Button Clicked")
-    // android
-    // window.JSInterface.skip()
-    // ios
-    window.location.href = "popclubapp://skiponboarding";
-    console.log("Skip Button Clicked")
+    if (window?.location?.search === "?device=ios") {
+        window.location.href = "popclubapp://skiponboarding";
+    }
+    if (window?.location?.search === "?device=android") {
+        window.JSInterface.skip()
+    }
+
 }
 
 var count = 1;

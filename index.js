@@ -1,9 +1,12 @@
 import FirstDiv1Animation from './lottie/1.json'
-import FirstDiv2Animation from './lottie/scan_transition.json'
-import FirstDiv3Animation from './lottie/scan_loop.json'
-import SecondDivAnimation from './lottie/PopCoin.json'
+// import FirstDiv2Animation from './lottie/scan_transition.json'
+import FirstDiv2Animation from './lottie/new/Scan&Pay_Transition.json'
+// import FirstDiv3Animation from './lottie/scan_loop.json'
+import FirstDiv3Animation from './lottie/new/Scan&Pay_Loop.json'
+// import SecondDivAnimation from './lottie/PopCoin.json'
+import SecondDivAnimation from './lottie/new/PopCoin(loop).json'
 import FourthDivAnimation from './lottie/Rewards.json'
-import Test from './test.json'
+import Test from './lottie/new/test-new.json'
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
 
@@ -13,8 +16,11 @@ document.getElementById("third").addEventListener("touchmove", thirdDivMove);
 document.getElementById("fourth").addEventListener("touchmove", fourthDivMove);
 document.getElementById("skip-btn").addEventListener("click", handleRewardsBtn);
 document.getElementById("3rd-div-next-btn").addEventListener("click", thirdDivMove);
+document.getElementById("last-next-btn").addEventListener("click", lastNextBtn);
 
-
+function lastNextBtn() {
+    console.log("last next button clicked")
+}
 
 function handleRewardsBtn() {
     // android
@@ -113,7 +119,7 @@ var animation5thDiv = lottieWeb.loadAnimation({
     // TODO - replace this with actual animation
     animationData: Test,
     renderer: 'svg',
-    loop: false,
+    loop: true,
     autoplay: false,
     name: "testing",
 });
@@ -155,8 +161,10 @@ function playLastAnimation() {
     animation2.destroy()
     animation3.destroy()
     document.getElementById('lottieDivFirst').style.display = 'none';
-    document.getElementById('lottieDivFifth').style.backgroundColor = 'white';
-
+    document.getElementById('lottieDivFifth').style.backgroundColor = 'black';
+    document.getElementById('card-visible-toggle').style.display = "none";
+    document.getElementById('fifth-bottom-div').style.display = "flex";
+    document.getElementById("first").removeEventListener("touchmove", firstDivMove);
     animation5thDiv.play()
 }
 

@@ -25,7 +25,7 @@ function lastNextBtn() {
 function handleRewardsBtn() {
     console.log("Skip Button Clicked")
     // android
-    window.JSInterface.skip()
+    // window.JSInterface.skip()
     // ios
     window.location.href = "popclubapp://skiponboarding";
     console.log("Skip Button Clicked")

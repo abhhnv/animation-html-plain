@@ -23,6 +23,7 @@ function lastNextBtn() {
 }
 
 function handleRewardsBtn() {
+    console.log("Skip Button Clicked")
     // android
     window.JSInterface.skip()
     // ios

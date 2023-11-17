@@ -9,7 +9,8 @@ import ThirdDivAnimation from './lottie/new/newnew/PopShop.json'
 // fourth div
 import FourthDivAnimation from './lottie/new/newnew/Rewards_2.json'
 // fifth div
-import FifthDivAnimation from './lottie/new/newnew/Feature_ZoomOUT (1).json'
+import FifthDiv1Animation from './lottie/new/newnew/Feature_ZoomOUT (1).json'
+import FifthDiv2Animation from './lottie/new/newnew/Feature_ZoomOUT_Idle.json'
 
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
@@ -187,16 +188,32 @@ function playLastAnimation() {
     document.getElementById('fifth-bottom-div').style.display = "flex";
     document.getElementById("first").removeEventListener("touchmove", firstDivMove);
     // play animation
-    lottieWeb.loadAnimation({
+    const fifth1animation = lottieWeb.loadAnimation({
         container: document.getElementById('lottieDivFifth'),
-        // TODO - replace this with actual animation
-        animationData: FifthDivAnimation,
+        animationData: FifthDiv1Animation,
         renderer: 'svg',
         loop: false,
-        autoplay: true,
+        autoplay: false,
         name: "testing",
     });
+    fifth1animation.play()
     animation3rdDiv.destroy()
+
+    fifth1animation.addEventListener('complete', playFive2animation);
+
+    function playFive2animation() {
+        console.log("complete last last")
+        fifth1animation.destroy()
+        const fifth2animation = lottieWeb.loadAnimation({
+            container: document.getElementById('lottieDivFifth'),
+            animationData: FifthDiv2Animation,
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+            name: "testing",
+        });
+        fifth2animation.play()
+    }
 }
 
 console.log({ count })

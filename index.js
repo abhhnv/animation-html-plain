@@ -130,6 +130,7 @@ var animation3rdDiv = lottieWeb.loadAnimation({
     loop: false,
     autoplay: false,
     name: "Demo Animation",
+    animationSpeed: 0.1
 });
 
 var animation5thDiv = lottieWeb.loadAnimation({
@@ -168,6 +169,7 @@ function thirdDivMove() {
 
 function fourthDivMove() {
     handleFourth()
+    animation3rdDiv.setSpeed(0.5)
     animation3rdDiv.play()
     count = 4;
     console.log("count", count)

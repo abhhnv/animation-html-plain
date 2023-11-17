@@ -9,7 +9,8 @@ import ThirdDivAnimation from './lottie/new/newnew/PopShop.json'
 // fourth div
 import FourthDivAnimation from './lottie/new/newnew/Rewards_2.json'
 // fifth div
-import Test from './lottie/new/test-new.json'
+import FifthDivAnimation from './lottie/new/newnew/Feature_ZoomOUT (1).json'
+
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
 
@@ -133,15 +134,15 @@ var animation3rdDiv = lottieWeb.loadAnimation({
     animationSpeed: 0.1
 });
 
-var animation5thDiv = lottieWeb.loadAnimation({
-    container: document.getElementById('lottieDivFifth'),
-    // TODO - replace this with actual animation
-    animationData: Test,
-    renderer: 'svg',
-    loop: true,
-    autoplay: false,
-    name: "testing",
-});
+// var animation5thDiv = lottieWeb.loadAnimation({
+//     container: document.getElementById('lottieDivFifth'),
+//     // TODO - replace this with actual animation
+//     animationData: Test,
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: false,
+//     name: "testing",
+// });
 
 animation1.addEventListener('complete', playNextAnimation);
 
@@ -177,15 +178,25 @@ function fourthDivMove() {
 
 function playLastAnimation() {
     console.log("lastinggggggggg")
-    animation1.destroy()
-    animation2.destroy()
-    animation3.destroy()
+    animation1?.destroy()
+    animation2?.destroy()
+    animation3?.destroy()
     document.getElementById('lottieDivFirst').style.display = 'none';
     document.getElementById('lottieDivFifth').style.backgroundColor = 'black';
     document.getElementById('card-visible-toggle').style.display = "none";
     document.getElementById('fifth-bottom-div').style.display = "flex";
     document.getElementById("first").removeEventListener("touchmove", firstDivMove);
-    animation5thDiv.play()
+    // play animation
+    lottieWeb.loadAnimation({
+        container: document.getElementById('lottieDivFifth'),
+        // TODO - replace this with actual animation
+        animationData: FifthDivAnimation,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        name: "testing",
+    });
+    animation3rdDiv.destroy()
 }
 
 console.log({ count })
@@ -229,7 +240,7 @@ function handleThird() {
     smoothScrollIntoView(ele, {
         block: "start", // or "center" or "end"
         inline: "nearest", // or "center" or "end"
-        behavior: "smooth",
+        behavior: "auto",
     });
     disableScrolling();
 }

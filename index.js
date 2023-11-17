@@ -1,11 +1,14 @@
-import FirstDiv1Animation from './lottie/1.json'
-// import FirstDiv2Animation from './lottie/scan_transition.json'
+// first div
+import FirstDiv1Animation from './lottie/new/newnew/Features_Idle (1).json'
 import FirstDiv2Animation from './lottie/new/Scan&Pay_Transition.json'
-// import FirstDiv3Animation from './lottie/scan_loop.json'
 import FirstDiv3Animation from './lottie/new/Scan&Pay_Loop.json'
-// import SecondDivAnimation from './lottie/PopCoin.json'
-import SecondDivAnimation from './lottie/new/PopCoin(loop).json'
-import FourthDivAnimation from './lottie/Rewards.json'
+// second div
+import SecondDivAnimation from './lottie/new/newnew/PopCoin (1).json'
+// third div
+import ThirdDivAnimation from './lottie/new/newnew/PopShop.json'
+// fourth div
+import FourthDivAnimation from './lottie/new/newnew/Rewards_2.json'
+// fifth div
 import Test from './lottie/new/test-new.json'
 import lottieWeb from "lottie-web";
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
@@ -28,6 +31,7 @@ function lastNextBtn() {
     if (window?.location?.search === "?device=ios") {
         window.location.href = "popclubapp://skiponboarding";
     }
+
     if (window?.location?.search === "?device=android") {
         window.JSInterface.skip()
     }
@@ -38,6 +42,7 @@ function handleRewardsBtn() {
     if (window?.location?.search === "?device=ios") {
         window.location.href = "popclubapp://skiponboarding";
     }
+
     if (window?.location?.search === "?device=android") {
         window.JSInterface.skip()
     }
@@ -120,8 +125,7 @@ var animation4thDiv = lottieWeb.loadAnimation({
 
 var animation3rdDiv = lottieWeb.loadAnimation({
     container: document.getElementById('lottieDivThird'),
-    // TODO - replace this with actual animation
-    animationData: FirstDiv2Animation,
+    animationData: ThirdDivAnimation,
     renderer: 'svg',
     loop: false,
     autoplay: false,

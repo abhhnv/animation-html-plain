@@ -11,8 +11,9 @@ import FourthDivAnimation from './lottie/new/newnew/Rewards_2.json'
 // fifth div
 import FifthDiv1Animation from './lottie/new/newnew/Feature_ZoomOUT (1).json'
 import FifthDiv2Animation from './lottie/new/newnew/Feature_ZoomOUT_Idle.json'
-
+//lottie-web for handling lottie animations
 import lottieWeb from "lottie-web";
+// smooth scroll is not supported in safari, therefore a polyfill library
 import smoothScrollIntoView from "smooth-scroll-into-view-if-needed"; // Import the polyfill
 
 document.getElementById("first").addEventListener("touchmove", firstDivMove);

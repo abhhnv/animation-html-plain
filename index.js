@@ -49,7 +49,6 @@ function handleRewardsBtn() {
     if (window?.location?.search === "?device=android") {
         window.JSInterface.skip()
     }
-
 }
 
 var count = 1;

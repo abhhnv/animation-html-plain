@@ -2,10 +2,10 @@
   "name": "animation-html",
   "version": "1.0.0",
   "description": "",
-  "source": "index.html",
+  "source": "newindex.html",
   "scripts": {
-    "start": "parcel index.html --no-cache",
-    "build": "parcel build index.html --no-cache"
+    "start": "parcel newindex.html --no-cache",
+    "build": "parcel build newindex.html --no-cache"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "parcel": "^2.10.2"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.2",
     "lottie-web": "^5.12.2",
     "smooth-scroll-into-view-if-needed": "^2.0.2"
   }

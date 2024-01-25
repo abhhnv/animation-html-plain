@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,6 +113,7 @@
         body {
             line-height: 1;
             overflow: hidden;
+            background-color: black;
         }
 
         ol,
@@ -139,11 +139,6 @@
             border-spacing: 0;
         }
 
-        #first {
-            width: 200px;
-            height: 200px;
-        }
-
         @font-face {
             font-family: 'Sf Pro';
             src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
@@ -155,227 +150,25 @@
             src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
             font-weight: 400;
         }
+
+        .next-btn {
+            background-color: #F56651;
+            position: fixed;
+            color: white;
+            bottom: 60px;
+            right: 40px;
+            border: none;
+            padding: 16px 22px;
+            border-radius: 8px;
+            font-size: 22px;
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
-    
-    <main id="androidContainer">
-        <section id="maincontainer"
-            style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
-
-            <div id="first" style="height: 100vh; width: 100svw; background-color: black;">
-                <!-- toggle display here -->
-                <div id="card-visible-toggle"
-                    style="visibility: hidden; margin: 0px 20px;height: 20vh; display: flex; flex-direction: column; justify-content: center;">
-                    <div id="skip-btn-first"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-align: end; text-decoration: underline;">
-                        Skip</div>
-                    <br />
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro'; padding-bottom: 7px;">
-                        Credit on UPI</div>
-                    <!-- <br /> -->
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Link your RuPay Credit Card on UPI</div>
-                    <br />
-                </div>
-                <!-- // first div container -->
-                <div id="lottieDivFirst" style="background-color: black; height: 75vh; width: 100vw;"></div>
-                <!-- // fifth/last div container -->
-                <div id="lottieDivFifth" style="background-color: black; height: 85vh; width: 100vw;"></div>
-                <!-- // fifth animation's bottom text/nextbutton -->
-                <div id="fifth-bottom-div"
-                    style="height: 10vh; background-color: black; display: none; align-items: center; justify-content: flex-end; padding: 0px 10px;">
-                    <div>
-                        <button id="last-next-btn"
-                            style="background-color: #E55A46; border: 2px solid #D54B35; color: white; padding: 2vh; font-size: 16px; font-weight: 700; border-radius: 8px; font-family: 'Sf Pro';">
-                            Next
-                        </button>
-                    </div>
-                </div>
-                <div style="padding-bottom: 5vh;"></div>
-            </div>
-
-            <div id="second" style="height: 100vh; width: 100vw; background-color: black;">
-                <div
-                    style="margin: 0px 20px;height: 20vh; display: flex; flex-direction: column; justify-content: flex-end">
-                    <div id="skip-btn-second"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-align: end; text-decoration: underline;">
-                        Skip
-                    </div>
-                    <br />
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro'; padding-bottom: 7px;">
-                        Earn & Redeem POPcoins</div>
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Get 10% on all transactions & use it across brands</div>
-                    <br />
-                </div>
-                <div style="background-color: black; height: 75vh; width: 100vw;" id="lottieDivSecond"></div>
-            </div>
-
-            <div id="third" style="height: 100vh; width: 100vw; background-color: black;">
-                <div style="background-color: black; height: 75vh; width: 100vw;" id="lottieDivThird"></div>
-                <div style="margin: 0px 20px; height: 20vh;">
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white;font-family: 'Sf Pro'; padding-bottom: 4px;">
-                        1000+ D2C Brands</div>
-                    <!-- <br /> -->
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400; text-align: center; font-family: 'Sf Pro'; padding-bottom: 4px;">
-                        Shop India's
-                        favourite brands across
-                        lifestyle categories</div>
-                    <!-- <br /> -->
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div id="skip-btn-third"
-                            style="color: #9B9B9B; font-weight: 400; font-family: 'Sf Pro'; text-decoration: underline;">
-                            Skip</div>
-                        <div style="color: #9B9B9B;">
-                            <button id="3rd-div-next-btn"
-                                style="background-color: #E55A46; border: 2px solid #D54B35; color: white; padding: 2vh; font-size: 16px; font-weight: 700; border-radius: 8px; font-family: 'Sf Pro';">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="fourth" style="height: 100vh; width: 100vw; background-color: black;">
-                <div style="background-color: black; height: 75vh; width: 100vw;" id="lottieDivFourth"></div>
-                <div style="margin: 0px 20px;height: 20vh;">
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro';">
-                        Exciting Rewards</div>
-                    <br />
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Enjoy unlimited
-                        offers, discounts and
-                        samples from the finest brands</div>
-                    <br />
-                    <div id="skip-btn-fourth"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-decoration: underline;">Skip
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <main id="iosContainer">
-        <section id="maincontainer"
-            style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; overflow: hidden;">
-
-            <div id="first" style="height: 100svh; width: 100svw; background-color: black;">
-                <!-- toggle display here -->
-                <div id="card-visible-toggle"
-                    style="visibility: hidden; margin: 0px 20px;height: 20svh; display: flex; flex-direction: column; justify-content: center;">
-                    <div id="skip-btn-first"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-align: end; text-decoration: underline;">
-                        Skip</div>
-                    <br />
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro'; padding-bottom: 7px;">
-                        Credit on UPI</div>
-                    <!-- <br /> -->
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Link your RuPay Credit Card on UPI</div>
-                    <br />
-                </div>
-                <!-- // first div container -->
-                <div id="lottieDivFirst" style="background-color: black; height: 75svh; width: 100svw;"></div>
-                <!-- // fifth/last div container -->
-                <div id="lottieDivFifth" style="background-color: black; height: 85svh; width: 100svw;"></div>
-                <!-- // fifth animation's bottom text/nextbutton -->
-                <div id="fifth-bottom-div"
-                    style="height: 10svh; background-color: black; display: none; align-items: center; justify-content: flex-end; padding: 0px 10px;">
-                    <div>
-                        <button id="last-next-btn"
-                            style="background-color: #E55A46; border: 2px solid #D54B35; color: white; padding: 2svh; font-size: 16px; font-weight: 700; border-radius: 8px; font-family: 'Sf Pro';">
-                            Next
-                        </button>
-                    </div>
-                </div>
-                <div style="padding-bottom: 5svh;"></div>
-            </div>
-
-            <div id="second" style="height: 100svh; width: 100svw; background-color: black;">
-                <div
-                    style="margin: 0px 20px;height: 20svh; display: flex; flex-direction: column; justify-content: flex-end">
-                    <div id="skip-btn-second"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-align: end; text-decoration: underline;">
-                        Skip
-                    </div>
-                    <br />
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro'; padding-bottom: 7px;">
-                        Earn & Redeem POPcoins</div>
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Get 10% on all transactions & use it across brands</div>
-                    <br />
-                </div>
-                <div style="background-color: black; height: 75svh; width: 100svw;" id="lottieDivSecond"></div>
-            </div>
-
-            <div id="third" style="height: 100svh; width: 100svw; background-color: black;">
-                <div style="background-color: black; height: 75svh; width: 100svw;" id="lottieDivThird"></div>
-                <div style="margin: 0px 20px; height: 20svh;">
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white;font-family: 'Sf Pro'; padding-bottom: 4px;">
-                        1000+ D2C Brands</div>
-                    <!-- <br /> -->
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400; text-align: center; font-family: 'Sf Pro'; padding-bottom: 4px;">
-                        Shop India's
-                        favourite brands across
-                        lifestyle categories</div>
-                    <!-- <br /> -->
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div id="skip-btn-third"
-                            style="color: #9B9B9B; font-weight: 400; font-family: 'Sf Pro'; text-decoration: underline;">
-                            Skip</div>
-                        <div style="color: #9B9B9B;">
-                            <button id="3rd-div-next-btn"
-                                style="background-color: #E55A46; border: 2px solid #D54B35; color: white; padding: 2svh; font-size: 16px; font-weight: 700; border-radius: 8px; font-family: 'Sf Pro';">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="fourth" style="height: 100svh; width: 100svw; background-color: black;">
-                <div style="background-color: black; height: 75svh; width: 100svw;" id="lottieDivFourth"></div>
-                <div style="margin: 0px 20px;height: 20svh;">
-                    <div
-                        style="font-size: 28px; font-weight: 700; text-align: center; color: white; font-family: 'Sf Pro';">
-                        Exciting Rewards</div>
-                    <br />
-                    <div
-                        style="color: #9B9B9B; font-size: 16px; font-weight: 400;text-align: center; font-family: 'Sf Pro';">
-                        Enjoy unlimited
-                        offers, discounts and
-                        samples from the finest brands</div>
-                    <br />
-                    <div id="skip-btn-fourth"
-                        style="color: #9B9B9B;font-weight: 400; font-family: 'Sf Pro'; text-decoration: underline;">Skip
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        if (window?.location?.search === "?device=ios") {
-            document.getElementById("androidContainer").remove();
-        }
-
-        if (window?.location?.search === "?device=android") {
-            document.getElementById("iosContainer").remove();
-        }
-    </script>
-
+    <div id="first-container"></div>
+    <button class="next-btn" id="next-btn">NEXT</button>
     <script async defer type="module" src="index.js" />
 </body>
-
 </html>

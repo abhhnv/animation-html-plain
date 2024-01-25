@@ -2,10 +2,10 @@
   "name": "animation-html",
   "version": "1.0.0",
   "description": "",
-  "source": "newindex.html",
+  "source": "index.html",
   "scripts": {
-    "start": "parcel newindex.html --no-cache",
-    "build": "parcel build newindex.html --no-cache"
+    "start": "parcel index.html --no-cache",
+    "build": "parcel build index.html --no-cache"
   },
   "keywords": [],
   "author": "",

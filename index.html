@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,7 +161,40 @@
             border: none;
             padding: 16px 22px;
             border-radius: 8px;
-            font-size: 22px;
+            visibility: hidden;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 120%;
+            /* 0.9rem */
+            letter-spacing: 0.045rem;
+            text-transform: uppercase;
+        }
+
+        .skip-top-btn {
+            border: none;
+            outline: none;
+            background-color: black;
+            color: #777777;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: underline;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            visibility: hidden;
+        }
+
+        .skip-bottom-btn {
+            border: none;
+            outline: none;
+            background-color: black;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #777777;
+            text-decoration: underline;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
             visibility: hidden;
         }
     </style>
@@ -168,7 +202,10 @@
 
 <body>
     <div id="first-container"></div>
+    <button class="skip-top-btn" id="skip-top-btn">Skip</button>
     <button class="next-btn" id="next-btn">NEXT</button>
+    <button class="skip-bottom-btn" id="skip-bottom-btn">Skip</button>
     <script async defer type="module" src="index.js" />
 </body>
+
 </html>

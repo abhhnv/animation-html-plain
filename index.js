@@ -184,6 +184,8 @@ function handleSixthLoaderClick() {
 }
 
 function eigth() {
+    document.getElementById("skip-top-btn").style.visibility = "visible"
+    document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation7.destroy();
     animation8 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
@@ -224,6 +226,9 @@ function handleNineClick() {
 }
 
 function ten() {
+    document.getElementById("skip-top-btn").style.visibility = "hidden"
+    document.getElementById("skip-bottom-btn").style.visibility = "visible"
+
     animation8.destroy();
     animation10 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
@@ -263,6 +268,8 @@ function handleElevenClick(){
 }
 
 function twelve(){
+    document.getElementById("skip-top-btn").style.visibility = "visible"
+    document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation11.destroy();
     animation12 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
@@ -279,6 +286,8 @@ function twelve(){
 }
 
 function thirteen(){
+    document.getElementById("skip-top-btn").style.visibility = "visible"
+    document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation12.destroy();
     animation13 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),

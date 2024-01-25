@@ -19,7 +19,7 @@ import Fifteen from './newlottiefiles/Supercard-11.json'
 
 
 function first() {
-    animation1 = lottieWeb.loadAnimation({
+    var animation1 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -36,7 +36,7 @@ first()
 
 function second() {
     animation1.destroy();
-    animation2 = lottieWeb.loadAnimation({
+    var animation2 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -57,7 +57,7 @@ function handleNextButton() {
 
 function third() {
     animation2.destroy();
-    animation3 = lottieWeb.loadAnimation({
+    var animation3 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -74,7 +74,7 @@ function third() {
 
 function fourth() {
     animation3.destroy();
-    animation4 = lottieWeb.loadAnimation({
+    var animation4 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -90,7 +90,7 @@ function fourth() {
 
 function fifth() {
     animation4.destroy();
-    animation5 = lottieWeb.loadAnimation({
+    var animation5 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -106,7 +106,7 @@ function fifth() {
 
 function sixth() {
     animation5.destroy();
-    animation6 = lottieWeb.loadAnimation({
+    var animation6 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -122,7 +122,7 @@ function sixth() {
 
 function sixthloader() {
     animation6.destroy();
-    animation7 = lottieWeb.loadAnimation({
+    var animation7 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: true,
@@ -142,7 +142,7 @@ function handleSixthLoaderClick() {
 
 function eigth() {
     animation7.destroy();
-    animation8 = lottieWeb.loadAnimation({
+    var animation8 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -182,7 +182,7 @@ function handleNineClick() {
 
 function ten() {
     animation8.destroy();
-    animation10 = lottieWeb.loadAnimation({
+    var animation10 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -198,7 +198,7 @@ function ten() {
 
 function eleven(){
     animation10.destroy();
-    animation11 = lottieWeb.loadAnimation({
+    var animation11 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: true,
@@ -221,7 +221,7 @@ function handleElevenClick(){
 
 function twelve(){
     animation11.destroy();
-    animation12 = lottieWeb.loadAnimation({
+    var animation12 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -237,7 +237,7 @@ function twelve(){
 
 function thirteen(){
     animation12.destroy();
-    animation13 = lottieWeb.loadAnimation({
+    var animation13 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -265,7 +265,7 @@ function fourteen(){
     document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
 
     animation13.destroy();
-    animation14 = lottieWeb.loadAnimation({
+    var animation14 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -288,7 +288,7 @@ function fifteen(){
     document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
 
     animation14.destroy();
-    animation15 = lottieWeb.loadAnimation({
+    var animation15 = lottieWeb.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,

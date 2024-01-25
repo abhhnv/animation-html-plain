@@ -19,6 +19,7 @@ import Fifteen from './newlottiefiles/Supercard-11.json'
 
 var animation1
 var animation2
+var animation3
 var animation4
 var animation5
 var animation6

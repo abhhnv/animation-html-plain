@@ -255,6 +255,10 @@ function handleElevenClick(){
 function twelve(){
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
+
+    document.getElementById("next-btn").removeEventListener('click', handleNextButton)
+    document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
+
     animation11.destroy();
     animation12 = lottie.loadAnimation({
         container: document.getElementById('first-container'),

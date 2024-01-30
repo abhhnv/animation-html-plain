@@ -1,4 +1,4 @@
-import lottie from './lottiescript.js'
+import lottie from 'lottie-web/build/player/lottie_light.min.js'
 
 import One from './newlottiefiles/1.json'
 import Two from './newlottiefiles/2.json'

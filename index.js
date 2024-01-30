@@ -1,11 +1,10 @@
-// import lottie from "lottie-web";
-import lottie from 'lottie-web/build/player/lottie_light.min.js'
+import lottie from './lottiescript.js'
 
 import One from './newlottiefiles/1.json'
 import Two from './newlottiefiles/2.json'
-import Three from './newlottiefiles/3.json'
-import Four from './newlottiefiles/4.json'
-import Fifth from './newlottiefiles/5.json'
+import Three from './newlottiefiles/POPcoinsToQuardrants.json'
+import Four from './newlottiefiles/FirstScreenQuadrants-2.json'
+import Fifth from './newlottiefiles/quadrantstoscanandpay_2.json'
 import Sixth from './newlottiefiles/6.json'
 // import Sixth_Loader from './newlottiefiles/Loader_Quadrant.json'
 import Sixth_Loader from './newlottiefiles/7-2.json'
@@ -19,32 +18,16 @@ import Thirteen from './newlottiefiles/13.json'
 import Fourteen from './newlottiefiles/Supercard-10.json'
 import Fifteen from './newlottiefiles/Supercard-11.json'
 
+const handleTopSkip = async () => {
+    await import("./handlers.js").handleTopSkip
+}
+
+const handleBottomSkip = async () => {
+    await import("./handlers.js").handleBottomSkip
+}
+
 document.getElementById("skip-top-btn").addEventListener("click", handleTopSkip)
 document.getElementById("skip-bottom-btn").addEventListener("click", handleBottomSkip)
-
-
-function handleTopSkip(){
-    if (window?.location?.search === "?device=ios") {
-        window.location.href = "popclubapp://skiponboarding";
-    }
-
-    if (window?.location?.search === "?device=android") {
-        window.JSInterface.skip()
-    }
-
-}
-
-function handleBottomSkip(){
-    if (window?.location?.search === "?device=ios") {
-        window.location.href = "popclubapp://skiponboarding";
-    }
-
-    if (window?.location?.search === "?device=android") {
-        window.JSInterface.skip()
-    }
-}
-
-
 
 var animation1
 var animation2
@@ -356,33 +339,6 @@ function fifteen(){
         document.getElementById("next-btn").style.visibility = "visible";
     });
 }
-
-
-
-
-
-// function handleTenClick(){
-//     ten()
-// }
-
-
-// function ten(){
-//     animation9.destroy();
-//     animation10 = lottie.loadAnimation({
-//         container: document.getElementById('first-container'),
-//         renderer: 'svg',
-//         loop: false,
-//         autoplay: false,
-//         name: "Demo Animation",
-//         animationData: Nine
-//     });
-//     animation10.play()
-//     animation10.addEventListener('complete', () => {
-//         console.log("10000")
-//     }); 
-// }
-
-
 
 // https://ik.imagekit.io/t2vt6tx4m/onboarding/1_yyGehxKhKc.json?updatedAt=1705916939231
 // https://ik.imagekit.io/t2vt6tx4m/onboarding/2_GoL8XAtoF9.json?updatedAt=1705916939618

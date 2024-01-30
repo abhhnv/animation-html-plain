@@ -4,7 +4,7 @@ import One from './newlottiefiles/1.json'
 import Two from './newlottiefiles/2.json'
 import Three from './newlottiefiles/POPcoinsToQuardrants.json'
 import Four from './newlottiefiles/FirstScreenQuadrants-2.json'
-import Fifth from './newlottiefiles/quadrantstoscanandpay_2.json'
+import Fifth from './newlottiefiles/quadrantstoscanandpay_3.json'
 import Sixth from './newlottiefiles/6.json'
 // import Sixth_Loader from './newlottiefiles/Loader_Quadrant.json'
 import Sixth_Loader from './newlottiefiles/7-2.json'
@@ -173,8 +173,8 @@ function sixthloader() {
     });
     animation7.play()
     document.getElementById('first-container').addEventListener("click", handleSixthLoaderClick)
-    animation7.addEventListener('complete', () => {
-    });
+    // animation7.addEventListener('complete', () => {
+    // });
 }
 
 function handleSixthLoaderClick() {
@@ -184,6 +184,9 @@ function handleSixthLoaderClick() {
 function eigth() {
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
+
+    document.getElementById('first-container').removeEventListener("click", handleSixthLoaderClick)
+
     animation7.destroy();
     animation8 = lottie.loadAnimation({
         container: document.getElementById('first-container'),

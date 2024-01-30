@@ -1,4 +1,6 @@
-import lottieWeb from "lottie-web";
+// import lottie from "lottie-web";
+import lottie from 'lottie-web/build/player/lottie_light.min.js'
+
 import One from './newlottiefiles/1.json'
 import Two from './newlottiefiles/2.json'
 import Three from './newlottiefiles/3.json'
@@ -61,7 +63,7 @@ var animation14
 var animation15
 
 function first() {
-    animation1 = lottieWeb.loadAnimation({
+    animation1 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -78,7 +80,7 @@ first()
 
 function second() {
     animation1.destroy();
-    animation2 = lottieWeb.loadAnimation({
+    animation2 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -100,7 +102,7 @@ function handleNextButton() {
 function third() {
     document.getElementById("skip-top-btn").style.visibility = "visible"
     animation2.destroy();
-    animation3 = lottieWeb.loadAnimation({
+    animation3 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -117,7 +119,7 @@ function third() {
 
 function fourth() {
     animation3.destroy();
-    animation4 = lottieWeb.loadAnimation({
+    animation4 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -133,7 +135,7 @@ function fourth() {
 
 function fifth() {
     animation4.destroy();
-    animation5 = lottieWeb.loadAnimation({
+    animation5 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -149,7 +151,7 @@ function fifth() {
 
 function sixth() {
     animation5.destroy();
-    animation6 = lottieWeb.loadAnimation({
+    animation6 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -165,7 +167,7 @@ function sixth() {
 
 function sixthloader() {
     animation6.destroy();
-    animation7 = lottieWeb.loadAnimation({
+    animation7 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: true,
@@ -187,7 +189,7 @@ function eigth() {
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation7.destroy();
-    animation8 = lottieWeb.loadAnimation({
+    animation8 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -206,7 +208,7 @@ function eigth() {
 // function nine() {
 //     document.getElementById('first-container').removeEventListener("click", handleSixthLoaderClick)
 //     animation8.destroy();
-//     animation9 = lottieWeb.loadAnimation({
+//     animation9 = lottie.loadAnimation({
 //         container: document.getElementById('first-container'),
 //         renderer: 'svg',
 //         loop: true,
@@ -230,7 +232,7 @@ function ten() {
     document.getElementById("skip-bottom-btn").style.visibility = "visible"
 
     animation8.destroy();
-    animation10 = lottieWeb.loadAnimation({
+    animation10 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -246,7 +248,7 @@ function ten() {
 
 function eleven(){
     animation10.destroy();
-    animation11 = lottieWeb.loadAnimation({
+    animation11 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: true,
@@ -271,7 +273,7 @@ function twelve(){
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation11.destroy();
-    animation12 = lottieWeb.loadAnimation({
+    animation12 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -289,7 +291,7 @@ function thirteen(){
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation12.destroy();
-    animation13 = lottieWeb.loadAnimation({
+    animation13 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -317,7 +319,7 @@ function fourteen(){
     document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
 
     animation13.destroy();
-    animation14 = lottieWeb.loadAnimation({
+    animation14 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -340,7 +342,7 @@ function fifteen(){
     document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
 
     animation14.destroy();
-    animation15 = lottieWeb.loadAnimation({
+    animation15 = lottie.loadAnimation({
         container: document.getElementById('first-container'),
         renderer: 'svg',
         loop: false,
@@ -366,7 +368,7 @@ function fifteen(){
 
 // function ten(){
 //     animation9.destroy();
-//     animation10 = lottieWeb.loadAnimation({
+//     animation10 = lottie.loadAnimation({
 //         container: document.getElementById('first-container'),
 //         renderer: 'svg',
 //         loop: false,

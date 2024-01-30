@@ -18,12 +18,25 @@ import Thirteen from './newlottiefiles/13.json'
 import Fourteen from './newlottiefiles/Supercard-10.json'
 import Fifteen from './newlottiefiles/Supercard-11.json'
 
-const handleTopSkip = async () => {
-    await import("./handlers.js").handleTopSkip
+function handleTopSkip() {
+    if (window?.location?.search === "?device=ios") {
+        window.location.href = "popclubapp://skiponboarding";
+    }
+
+    if (window?.location?.search === "?device=android") {
+        window.JSInterface.skip()
+    }
+
 }
 
-const handleBottomSkip = async () => {
-    await import("./handlers.js").handleBottomSkip
+function handleBottomSkip() {
+    if (window?.location?.search === "?device=ios") {
+        window.location.href = "popclubapp://skiponboarding";
+    }
+
+    if (window?.location?.search === "?device=android") {
+        window.JSInterface.skip()
+    }
 }
 
 document.getElementById("skip-top-btn").addEventListener("click", handleTopSkip)

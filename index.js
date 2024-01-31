@@ -8,7 +8,6 @@ import Fifth from './newlottiefiles/quadrantstoscanandpay_3.json'
 import Sixth from './newlottiefiles/6.json'
 // import Sixth_Loader from './newlottiefiles/Loader_Quadrant.json'
 import Sixth_Loader from './newlottiefiles/7-2.json'
-
 import Eight from './newlottiefiles/Supercard-3.json'
 import Nine from './newlottiefiles/Shop_quadrant2-2.json'
 import Ten from './newlottiefiles/10.json'
@@ -227,6 +226,10 @@ function handleNineClick() {
 }
 
 function ten() {
+
+    document.getElementById('first-container').removeEventListener("click", handleSixthLoaderClick)
+    document.getElementById('first-container').removeEventListener("click", handleNineClick)
+
     document.getElementById("skip-top-btn").style.visibility = "hidden"
     document.getElementById("skip-bottom-btn").style.visibility = "visible"
 
@@ -291,6 +294,11 @@ function twelve(){
 }
 
 function thirteen(){
+    document.getElementById("next-btn").removeEventListener('click', handleThirteenClick)
+    document.getElementById("next-btn").removeEventListener('click', handleNineClick)
+    document.getElementById("next-btn").removeEventListener('click', handleElevenClick)
+
+
     document.getElementById("skip-top-btn").style.visibility = "visible"
     document.getElementById("skip-bottom-btn").style.visibility = "hidden"
     animation12.destroy();

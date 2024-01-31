@@ -66,6 +66,7 @@ function first() {
         name: "Demo Animation",
         animationData: One
     });
+    animation1.setSpeed(0.5)
     animation1.play()
     animation1.addEventListener('complete', () => {
         second();
